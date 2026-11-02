@@ -23,7 +23,19 @@ Developed by **Mohamadmilad Hadad** · Course instructor: **Vahid Ghorbani (وح
 | Ask a spoken question | Transcribe the question, allow review, and produce a response. |
 | Hear the answer | Present Persian text and speech through configurable adapters. |
 
-## Interface
+## Windows desktop and laptop camera
+
+The local **Streamlit application on Windows** provides direct laptop-camera capture alongside browser-camera and file input. Its experimental live-camera panel exposes object-box detection controls.
+
+<p align="center"><img src="assets/desktop-streamlit.png" alt="Windows Streamlit interface with Persian task selection and direct laptop-camera input" width="820"></p>
+
+<p align="center"><img src="assets/desktop-camera-controls.png" alt="Laptop-camera capture button and experimental live object-detection controls in the Windows interface" width="820"></p>
+
+*These screenshots show the actual local Streamlit application on Windows. They show the interface and camera controls; no camera image was captured and no model inference was run for these screenshots. They do not depict a completed detection result.*
+
+The laptop-camera workflow connects **image capture → a selected analysis task → a Persian text or spoken response**. Live detection and video tracking remain experimental.
+
+## Phone-oriented web interface
 
 <p align="center"><img src="assets/interface.png" alt="Persian interface with a large camera-and-description button, voice controls and help" width="820"></p>
 
