@@ -11,7 +11,37 @@ Developed by **Mohamadmilad Hadad** · Course instructor: **Vahid Ghorbani (وح
 
 [فارسی](README.fa.md) · [Architecture](docs/ARCHITECTURE.md) · [Capabilities](docs/CAPABILITIES.md) · [Verification](docs/VALIDATION.md) · [Connect on LinkedIn](https://www.linkedin.com/in/mohamadmilad-hadad-1026761ba/)
 
-> This repository is the project's public technical showcase. It contains the case study, interface screenshots and architecture; the application implementation and model files are not distributed here.
+> This repository presents the project and publishes a curated, runnable selection of its processing code: image/audio preprocessing, grounding, segmentation, tracking and Persian text handling, with focused tests. The complete application, operational configuration, source recordings, datasets and model weights remain outside this release.
+
+## Explore the selected code
+
+| Component | Engineering focus |
+| --- | --- |
+| [Image preparation](accessible_assistant/vision_preprocess.py) | Blur, brightness, contrast, enhancement and OCR regions. |
+| [Grounding parser](accessible_assistant/grounding.py) | Validate model-produced boxes and reject malformed geometry. |
+| [Audio preparation](accessible_assistant/audio_preprocess.py) | Voice activity, denoising and MFCC features. |
+| [Segmentation](accessible_assistant/segmentation.py) | GrabCut masks and text-component splitting. |
+| [Tracking](accessible_assistant/tracking.py) | IoU association and frame-relative motion trends. |
+| [Sequence model](accessible_assistant/sequence_model.py) | Optional compact GRU, with a fallback when weights are absent. |
+| [Persian descriptions](accessible_assistant/scene_text.py) | Traceable Persian sentences and compact detection evidence. |
+| [Overlay rendering](accessible_assistant/annotate.py) | Boxes, OCR polygons and masks on a copy of the image. |
+| [Text normalization](accessible_assistant/persian_text.py) | Persian letters, digits and whitespace normalization. |
+| [Result contracts](accessible_assistant/contracts.py) | Explicit status, timing, data and bounded metadata. |
+
+[Code guide and release scope](docs/CODE_MAP.md) · [Tests](tests) · [Runnable example](examples/quick_demo.py)
+
+### Run the published selection
+
+~~~sh
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# Linux/macOS: source .venv/bin/activate
+python -m pip install -r requirements-dev.txt
+python -m pytest -q tests
+python -m examples.quick_demo
+~~~
+
+The example saves a synthetic annotated image and a JSON report in output/demo. It opens no camera, downloads no model and sends no network requests. The core selection runs on CPU; optional GRU training needs PyTorch and uses synthetic trajectories.
 
 ## From a picture to a useful Persian response
 
@@ -64,15 +94,14 @@ The following frames come from the owner-provided screen recording, not the mobi
 
 Implemented components include Python, Streamlit, FastAPI, a PWA frontend, Qwen vision-language adapters, RT-DETR detection, EasyOCR, Whisper and configurable Persian speech backends. The work integrates existing model families; it does not claim to have trained a foundation model from scratch.
 
-```mermaid
-flowchart LR
-    A[Camera image or spoken question] --> B[Input checks and interaction state]
-    B --> C[Vision / detection / OCR / speech adapters]
-    C --> D[Persian response and uncertainty handling]
-    D --> E[Text and spoken answer]
-```
+<p align="center"><img src="assets/architecture.svg" alt="Complete architecture from camera, speech and text inputs through processing to Persian text and audio" width="100%"></p>
+
+[Open the complete diagram](assets/architecture.svg)
 
 ## Verification snapshot
+
+**Published selection: 21 tests and 6 subtests passed locally.** [Windows/Linux checks](https://github.com/Developesar/hamrah-didari/actions/workflows/components.yml).
+
 
 **266 software tests + 29 subtests passed on 2 November 2026.** These exercise application behavior and controlled backend contracts. They do not establish real-world model accuracy, accessibility acceptance or production readiness. See the [verification notes](docs/VALIDATION.md) for scope.
 

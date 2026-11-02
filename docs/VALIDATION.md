@@ -1,27 +1,23 @@
 # Verification snapshot
 
-Date: **2 November 2026**.
+Date: 2 November 2026.
 
-The implementation's local software test suite completed with:
+## Published processing selection
 
-- **266 passed**
-- **29 subtests passed**
-- **1 dependency deprecation warning**
+The included tests completed locally with **21 passed and 6 subtests passed**, with no skipped tests. They cover parser validation, image/audio preparation, synthetic masks, IoU tracking, Persian descriptions and geometry behavior. They do not load the application's model backends.
 
-Reference command, executed against the implementation workspace:
-
-```text
+~~~sh
+python -m pip install -r requirements-dev.txt
 python -m pytest -q tests
-```
+python -m examples.quick_demo
+~~~
 
-This showcase does not contain the implementation or that private test suite. The result is a reported local run, not a GitHub Actions result for this documentation repository.
+The [Windows/Linux workflow](https://github.com/Developesar/hamrah-didari/actions/workflows/components.yml) checks this public selection. Its actual run status is separate from the local result.
 
-## What this supports
+## Complete application context
 
-The suite checks contracts, input validation, state transitions, API behavior, web-interface behavior, feedback handling and other application boundaries using isolated runtime data and controlled substitutes where appropriate.
+The separate implementation workspace completed 266 software tests and 29 subtests on the same date. That broader suite is not included here. This is a reported local result for the complete application, with one dependency deprecation warning.
 
-## What this does not establish
+Neither test count establishes model accuracy, reliable navigation, noisy Persian speech quality, physical-phone performance or accessibility acceptance. Field evaluation with blind and low-vision users remains open.
 
-It does not establish model accuracy on everyday photographs, robust Persian speech in noisy environments, reliable navigation, physical-device performance, acceptance by blind or low-vision users, or production readiness. Fresh GPU inference and a new live deployment were not part of this publication check.
-
-A current-source credential-pattern scan completed without flagged candidates. That is a limited automated check, not a comprehensive security certification. Private environments, runtime data, operational credentials, model weights and participant media are excluded from this public repository.
+The recorded Windows example shows an uploaded-image workflow, not webcam capture or a latency benchmark. Desktop control screenshots do not represent a new inference run. Phone preview readiness and quota indicators are simulated.
