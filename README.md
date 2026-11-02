@@ -35,6 +35,16 @@ The local **Streamlit application on Windows** provides direct laptop-camera cap
 
 The laptop-camera workflow connects **image capture → a selected analysis task → a Persian text or spoken response**. Live detection and video tracking remain experimental.
 
+### Recorded Windows example
+
+The following frames come from the owner-provided screen recording, not the mobile preview. The example shows an uploaded kangaroo image and a later Persian answer with its audio player.
+
+<p align="center"><img src="assets/recorded-image-input.png" alt="Kangaroo image and recorded spoken-question controls in the Windows screen recording" width="680"></p>
+
+<p align="center"><img src="assets/recorded-persian-answer.png" alt="Recorded Persian answer identifying a kangaroo and an audio player, with the application uncertainty notice retained" width="680"></p>
+
+*Source: owner-provided recording, approximately 00:56 and 02:27. Frames are cropped to the application area; the original recording is unchanged. This example uses an uploaded image, not a webcam capture. The displayed answer is a recorded example, not an independent accuracy assessment or a latency benchmark.*
+
 ## Phone-oriented web interface
 
 <p align="center"><img src="assets/interface.png" alt="Persian interface with a large camera-and-description button, voice controls and help" width="820"></p>

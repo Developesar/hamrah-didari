@@ -17,4 +17,4 @@ The project brings multiple AI tasks into one Persian assistive workflow, with e
 
 ## Public media
 
-The interface images in this repository use the development preview server. Its response and quota fixtures are simulated. The screenshots demonstrate interface structure only; there are no participant images, voice recordings or private model artifacts in this showcase.
+The phone-interface screenshots use the development preview server, whose quota and response fixtures are simulated. Desktop screenshots show the actual local Streamlit interface. The separately labelled recorded example contains two frames from the owner-provided Windows recording: an uploaded image and a later Persian answer with its audio player. It does not demonstrate webcam capture or establish independent model accuracy. The original video, audio recordings, runtime data and model artifacts are not included.
