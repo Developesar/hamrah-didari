@@ -75,6 +75,19 @@ The following frames come from the owner-provided screen recording, not the mobi
 
 *Source: owner-provided recording, approximately 00:56 and 02:27. Frames are cropped to the application area; the original recording is unchanged. This example uses an uploaded image, not a webcam capture. The displayed answer is a recorded example, not an independent accuracy assessment or a latency benchmark.*
 
+
+### Recorded camera capture and grounded output
+
+These application-only frames show the camera workflow in the supplied Windows recordings: a phone in the browser-camera view, its later Persian description and audio player, and a separate object-detection example.
+
+| Camera input | Persian answer |
+| --- | --- |
+| ![Phone captured in the camera view](assets/recorded-camera-capture.png) | ![Recorded Persian phone description with audio player](assets/recorded-camera-answer.png) |
+
+<p align="center"><img src="assets/recorded-object-grounding.png" alt="Recorded person-detection box and Persian frame-relative description" width="580"></p>
+
+*Camera capture and phone answer: recording 0015, approximately 00:19 and 01:33. Object box: recording 0016, approximately 01:07, using an uploaded image. The on-screen uncertainty notices are retained. Detector scores are uncalibrated model outputs, not measured accuracy. These are selected recorded examples, not continuous live tracking or a timing benchmark.*
+
 ## Phone-oriented web interface
 
 <p align="center"><img src="assets/interface.png" alt="Persian interface with a large camera-and-description button, voice controls and help" width="820"></p>
