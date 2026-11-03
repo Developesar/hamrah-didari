@@ -4,6 +4,8 @@
 
 **A Persian-first visual assistant for blind and low-vision users.**
 
+[Watch the recorded project demo on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7523288175172055040/)
+
 An everyday question — *What is in front of me? Where is the object? What does this text say?* — should be answerable in the user's own language. Hamrah Didari brings visual understanding, text reading and voice interaction into one Persian interface.
 
 **Final capstone project · Sematec Comprehensive Artificial Intelligence Course**  
